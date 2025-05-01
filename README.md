@@ -171,8 +171,12 @@ MAILTO=""
 You can download the required database for free. In the directory where you want to store the db:
 wget -v -d https://maclookup.app/downloads/json-database/get-db -O mac_oui_db.json
 
+
+## Disclaimer
+Use at your own risk, I'm not responsible for 
+I'm not a Python developer, so the scripts may not be flawless. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQzMDg3NDcwLC0xODI1NDEzMDkwLDk1NT
-cwNzU2OCwxMjg4NTY0NDY5LDU5MTk1ODgwNywtNzI5NDIxNDA5
-XX0=
+eyJoaXN0b3J5IjpbNTUwODQ5ODA2LDM0MzA4NzQ3MCwtMTgyNT
+QxMzA5MCw5NTU3MDc1NjgsMTI4ODU2NDQ2OSw1OTE5NTg4MDcs
+LTcyOTQyMTQwOV19
 -->
