@@ -18,8 +18,7 @@ As for the scripts, some decisions I took for the basics
 
 This is not the end or final script, I've some ideas I want to add in the near future (more scanning or sourcing options, more granularity, more configurable...)
 
-**Warning**:
-- ensure you have a NetBox data backup before using this script the first time (you should take a daily backup anyway)
+**Warning**: ensure you have a NetBox data backup before using this script the first time (you should take a daily backup anyway)
 
 ### Prerequisites
 - NetBox 4.2.5+ (script developed and tested from 4.2.5 and later) on a linux server
@@ -27,7 +26,6 @@ This is not the end or final script, I've some ideas I want to add in the near f
 - Nmap installed
 - The OUI database in JSON format from https://maclookup.app
 - A NetBox API token with the correct permissions
-- The script requires that online/active hosts are pingable (I'll try to add other scan options later)
 - The script needs to run as root (for Nmap to work correctly)
 
 ## 1. What does the NetBox IPAM scanner do
@@ -196,7 +194,7 @@ Feel free to suggest improvements or optimizations, if they are viable, we can w
 ### A little bit of background
 In the past I used phpIPAM and I wrote a similar script for phpIPAM. But I moved to NetBox for a few reasons (more features, much better API). In phpIPAM, I didn't use any of its features which were not available in NetBox), so for me the move was easy and fast.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3NDMxNTc0NSwtMTcwNjA4MzM0NSwtMT
+eyJoaXN0b3J5IjpbMTcxMzQ1Mjk1MCwtMTcwNjA4MzM0NSwtMT
 Q2MTY1MTg5Niw1NzA0MDIwMjgsNTcwNDAyMDI4LDI3MjA5MjE5
 MiwxODMxNDA3NzA5LDE1MTU2ODY1ODQsLTc2NDY3NjUwNCwxMj
 Y2NDUyMzU5LDM0MzA4NzQ3MCwtMTgyNTQxMzA5MCw5NTU3MDc1
