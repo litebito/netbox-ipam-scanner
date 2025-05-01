@@ -82,10 +82,11 @@ Config file to set various options/variables to match you environment:
 - log level (DEBUG, INFO or ERROR)
 
 [netbox]:
-- your NetBox URL
+- url = your NetBox URL
 - your NetBox token
 - verify ssl = set to false if you are working with self signed certs
-- 
+- page size = pagination for the NetBox REST API (set lower if you experience timeout issues), 100 is a good default value
+- ipmac_link_expiration = 30
 
 ## netbox_ipam_scanner_init.py
 This script is called from the main script.
@@ -98,5 +99,5 @@ This script will
 
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2NDYzOTcyOCwtNzI5NDIxNDA5XX0=
+eyJoaXN0b3J5IjpbNDAxOTI3NTk5LC03Mjk0MjE0MDldfQ==
 -->
