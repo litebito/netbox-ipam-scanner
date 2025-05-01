@@ -142,10 +142,10 @@ MAILTO=""
 -	this will make it run every 15 minutes (adapt to your needs)
 
 ### The OUI database.
-You can download the required database for free. In the directory where you 
+You can download the required database for free. In the directory where you want to store the db:
 wget -v -d https://maclookup.app/downloads/json-database/get-db -O mac_oui_db.json
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkxMjgwNzQ4LDk1NTcwNzU2OCwxMjg4NT
+eyJoaXN0b3J5IjpbMjQyNDY3MDEzLDk1NTcwNzU2OCwxMjg4NT
 Y0NDY5LDU5MTk1ODgwNywtNzI5NDIxNDA5XX0=
 -->
