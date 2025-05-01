@@ -112,7 +112,7 @@ This script will
 
 ## 3. How to install
 ### 3.1 Create the NetBox API token and permissions
-You will need to create (in this order) a permissions set, a user_id, an API token
+You need to prepare a few things in NetBox, before the script can run: you will need to create (in this order) a permissions set, a user_id, an API token
 1. Logon in NetBox as an admin
 2. go to Authentication > Permissions, create a permission set, for example ***perm_api_ipam_scanner*** and configure this as follows:
 	-	Enabled: True
@@ -133,7 +133,9 @@ You will need to create (in this order) a permissions set, a user_id, an API tok
 4. go to Authentication > API, create a new token, and configure the token as follows:
 	-	Select the user you just created (from the example above: autom_ipam_scanner) 
 	-	Enable "Write Enabled"
-	-	Set the allowed IP's to the IP (or subnet
+	-	Set the allowed IP's to the IP (or subnet) of your server
+	-	***IMPORTANT*** Copy the API token and save it somewhere, this is the only moment you will see the token
+
 ### 3.2 The basics
 1. Copy the 2 script files and the toml file to the main script directory in your NetBox directory
 	 - if you installed netbox in /opt/netbox, copy the files to /opt/netbox/scripts
@@ -170,7 +172,7 @@ You can download the required database for free. In the directory where you want
 wget -v -d https://maclookup.app/downloads/json-database/get-db -O mac_oui_db.json
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA0NDU2OTc1LC0xODI1NDEzMDkwLDk1NT
+eyJoaXN0b3J5IjpbMzQzMDg3NDcwLC0xODI1NDEzMDkwLDk1NT
 cwNzU2OCwxMjg4NTY0NDY5LDU5MTk1ODgwNywtNzI5NDIxNDA5
 XX0=
 -->
