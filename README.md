@@ -12,8 +12,7 @@ As for the scripts, some decisions I took for the basics
 - I decided not to use (and change) the built in status field of NetBox, in case these are already in use for different purposes in your environment
 - The hostname (DSN FQDN) is retrieved during the scan when the IP is active, it remains untouched in NetBox, even if the IP address is offline. If the hostname is different when the scan discovers the IP again, it should automatically update from the scan.
 - Although NMAP can provide the vendor for a MAC address, I found that it was not able to do so for a lot of MAC addresses, so I decided to use the external OUI db to get better data.
-
-I've some future plans, to add some features to the script, 
+- For now, I decided to stick with 2 script files (I know it is not the "Python way" but it keeps it a bit easier for me now). When I expand the scripts more, I'll probably will split them more the Python way
 
 I made this script for my use case, but decided to share it, in case it is useful for others.
 
@@ -193,7 +192,7 @@ Feel free to suggest improvements, if they are viable, we can work together to a
 ### A little bit of background
 In the past I used phpIPAM and I wrote a similar script for phpIPAM. But I moved to NetBox for a few reasons (more features, much better API). In phpIPAM, I didn't use any of its features which were not available in NetBox), so for me the move was easy and fast.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY5MzgxOTA5LC03NjQ2NzY1MDQsMTI2Nj
-Q1MjM1OSwzNDMwODc0NzAsLTE4MjU0MTMwOTAsOTU1NzA3NTY4
-LDEyODg1NjQ0NjksNTkxOTU4ODA3LC03Mjk0MjE0MDldfQ==
+eyJoaXN0b3J5IjpbMTUxNTY4NjU4NCwtNzY0Njc2NTA0LDEyNj
+Y0NTIzNTksMzQzMDg3NDcwLC0xODI1NDEzMDkwLDk1NTcwNzU2
+OCwxMjg4NTY0NDY5LDU5MTk1ODgwNywtNzI5NDIxNDA5XX0=
 -->
