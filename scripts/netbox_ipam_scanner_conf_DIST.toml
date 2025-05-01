@@ -1,0 +1,58 @@
+# netbox_ipam_scanner_conf.toml
+# -*- coding: utf-8 -*-
+
+#Author:     LiteBitIO
+#Version:    1.2.0
+#Date:       2025-04-23
+#License:    GNU GPLv3
+
+# Description: configuration file for netbox_ipam_scanner
+
+
+[nmap]
+# nmap command‑line options (space‑separated)
+# dns servers to use for DNS resolution in your environment
+dns = "-dns-servers [YOUR DNS SERVER(s)]"
+# directory where XML scan outputs are stored
+output_dir = "/var/log/scans"
+
+[logging]
+# directory where the log files are stored
+log_dir  = "/var/log/netbox"
+# log filename
+log_file = "netbox_ipam_scanner.log"
+# root log level: DEBUG, INFO, WARNING, etc.
+level    = "INFO"
+
+[netbox]
+# NetBox API URL and NetBox token
+url       = [YOUR NETBOX URL]]
+token     = [YOUR TOKEN]]
+# whether to verify SSL certificates
+# If you are using a self-signed certificate, set this to false.
+verify_ssl = false
+# Pagination settings for NetBox API.
+# The NetBox API has a default page size of 50, which can be increased to a maximum of 1000. 
+# 100 is a good value for most use cases.
+page_size = 100
+# ipmac_link_expiration is the number of days after which an link between IP address and MAC address will be considered expired.
+# (not yet used in the script)
+ipmac_link_expiration = 30
+
+[options]
+# Any additional flags
+# If set to true, the script will look up the MAC address in the OUI database.
+# If set to false, the script will use the MAC address from NMAP.
+ext_mac_lookup = true
+# for future use
+enable_scan_nmap = true
+enable_scan_snmp = false
+enable_scan_arp = false
+
+
+[mac_oui]
+# Path and filename to the local MAC–to–vendor JSON database (relative to script)
+# If oui_db_path is not set, the script will look for the the local OUI db file in the same directory as the script.
+# If oui_db_path is set, the script will look for the OUI db file in the specified directory.
+oui_db_path = ""
+oui_db_file = "mac_oui_db.json"
