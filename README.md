@@ -9,7 +9,7 @@ I also know that this script is a little bit against NetBox's core philosophy (N
 As for the scripts, some decisions I took for the basics
 - I decided to use NMAP as the main scan tool, as it offers most flexibility now and future use.
 - The (data) input for the script comes 100% from NetBox (except for the configuration values of course), no other intermediate files
-- Prefixes will be scanned one by one
+- Prefixes will be scanned one by one, but in case of parent/child relation, only the child prefixes will be scanned (to avoid scanning enormous ranges)
 - I decided not to use (and change) the built in status field of NetBox, in case these are already in use for different purposes in your environment
 - The hostname (DSN FQDN) is retrieved during the scan when the IP is active, it remains untouched in NetBox, even if the IP address is offline. If the hostname is different when the scan discovers the IP again, it should automatically update from the scan.
 - Although NMAP can provide the vendor for a MAC address, I found that it was not able to do so for a lot of MAC addresses, so I decided to use the external OUI db to get better data.
@@ -193,8 +193,8 @@ Feel free to suggest improvements, if they are viable, we can work together to a
 ### A little bit of background
 In the past I used phpIPAM and I wrote a similar script for phpIPAM. But I moved to NetBox for a few reasons (more features, much better API). In phpIPAM, I didn't use any of its features which were not available in NetBox), so for me the move was easy and fast.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI3NTQ2NTk1LDE1MTU2ODY1ODQsLTc2ND
-Y3NjUwNCwxMjY2NDUyMzU5LDM0MzA4NzQ3MCwtMTgyNTQxMzA5
-MCw5NTU3MDc1NjgsMTI4ODU2NDQ2OSw1OTE5NTg4MDcsLTcyOT
-QyMTQwOV19
+eyJoaXN0b3J5IjpbMTgzMTQwNzcwOSwxNTE1Njg2NTg0LC03Nj
+Q2NzY1MDQsMTI2NjQ1MjM1OSwzNDMwODc0NzAsLTE4MjU0MTMw
+OTAsOTU1NzA3NTY4LDEyODg1NjQ0NjksNTkxOTU4ODA3LC03Mj
+k0MjE0MDldfQ==
 -->
