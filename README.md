@@ -69,7 +69,14 @@ group_name = to organize the CF visibly in the NetBox UI
 - cf_dcim_mac_online = Was this MAC active/online during the last (most recent) scan
 - cf_dcim_mac_scanner_info = Used to store other info from the scanner
 
-## Wo
+## netbox_ipam_scanner_init.py
+This script is called from the main script.
+
+This script will
+- Check and create the cust
+ 
+
+ 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzNTA5MTUzNywtNzI5NDIxNDA5XX0=
+eyJoaXN0b3J5IjpbLTE1MzA5MzYxNDgsLTcyOTQyMTQwOV19
 -->
