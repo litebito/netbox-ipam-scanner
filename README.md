@@ -4,7 +4,7 @@ The **NetBox IPAM Scanner** is a NetBox / Python script which uses NMAP to scan 
 
 I initially wanted to create a plugin for this, but as I'm not a seasoned Python dev, and to optimize the time I could spend on it, I decided to stick with a script. Also, because most activity would happen in the background anyway, I didn't see the big advantage of creating a plugin for it (except maybe for creating the necessary custom fields automatically)
 
-I also know that this script is a little bit against NetBox's core philosophy (NetBox being a SSOT), but I've seen a lot of users wanting an IPAM or 
+I also know that this script is a little bit against NetBox's core philosophy (NetBox being a SSOT), but I've seen a lot of users (like myself) wanting an IPAM or IP scanner, so I decided to share my efforts in case it is useful for others.
 
 As for the scripts, some decisions I took for the basics
 - I decided to use NMAP as the main scan tool, as it offers most flexibility now and future use.
@@ -15,7 +15,7 @@ As for the scripts, some decisions I took for the basics
 - Although NMAP can provide the vendor for a MAC address, I found that it was not able to do so for a lot of MAC addresses, so I decided to use the external OUI db to get better data.
 - For now, I decided to stick with 2 script files (I know it is not the "Python way" but it keeps it a bit easier for me now). When I expand the scripts more, I'll probably will split them more the Python way
 
-I made this script for my use case, but decided to share it, in case it is useful for others.
+This is not the end or final script, I've some ideas I want to add in the near future (more scanning options
 
 **Warning**:
 - ensure you have a NetBox data backup before using this script the first time (you should take a daily backup anyway)
@@ -193,8 +193,8 @@ Feel free to suggest improvements, if they are viable, we can work together to a
 ### A little bit of background
 In the past I used phpIPAM and I wrote a similar script for phpIPAM. But I moved to NetBox for a few reasons (more features, much better API). In phpIPAM, I didn't use any of its features which were not available in NetBox), so for me the move was easy and fast.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDgwNDUzOCwxODMxNDA3NzA5LDE1MT
-U2ODY1ODQsLTc2NDY3NjUwNCwxMjY2NDUyMzU5LDM0MzA4NzQ3
-MCwtMTgyNTQxMzA5MCw5NTU3MDc1NjgsMTI4ODU2NDQ2OSw1OT
-E5NTg4MDcsLTcyOTQyMTQwOV19
+eyJoaXN0b3J5IjpbLTYxMDI0ODI4LDE4MzE0MDc3MDksMTUxNT
+Y4NjU4NCwtNzY0Njc2NTA0LDEyNjY0NTIzNTksMzQzMDg3NDcw
+LC0xODI1NDEzMDkwLDk1NTcwNzU2OCwxMjg4NTY0NDY5LDU5MT
+k1ODgwNywtNzI5NDIxNDA5XX0=
 -->
