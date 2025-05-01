@@ -4,13 +4,13 @@ The **NetBox IPAM Scanner** is a NetBox / Python script which uses NMAP to scan 
 
 I initially wanted to create a plugin for this, but as I'm not a seasoned Python dev, and to optimize the time I could spend on it, I decided to stick with a script. Also, because most activity would happen in the background anyway, I didn't see the big advantage of creating a plugin for it (except maybe for creating the necessary custom fields automatically)
 
-I also know that this script is a little bit against NetBox's core philosophy (NetBox being a SSOT).
+I also know that this script is a little bit against NetBox's core philosophy (NetBox being a SSOT), but I've seen a lot of users wanting an IPAM or 
 
 As for the scripts, some decisions I took for the basics
 - I decided to use NMAP as the main scan tool, as it offers most flexibility now and future use.
 - The (data) input for the script comes 100% from NetBox (except for the configuration values of course), no other intermediate files
 - Prefixes will be scanned one by one, but in case of parent/child relation, only the child prefixes will be scanned (to avoid scanning enormous ranges)
-- I decided not to use (and change) the built in status field of NetBox, in case these are already in use for different purposes in your environment
+- I decided not to use (and change) the default status field of NetBox, in case these are already in use for different purposes in your environment
 - The hostname (DSN FQDN) is retrieved during the scan when the IP is active, it remains untouched in NetBox, even if the IP address is offline. If the hostname is different when the scan discovers the IP again, it should automatically update from the scan.
 - Although NMAP can provide the vendor for a MAC address, I found that it was not able to do so for a lot of MAC addresses, so I decided to use the external OUI db to get better data.
 - For now, I decided to stick with 2 script files (I know it is not the "Python way" but it keeps it a bit easier for me now). When I expand the scripts more, I'll probably will split them more the Python way
@@ -193,8 +193,8 @@ Feel free to suggest improvements, if they are viable, we can work together to a
 ### A little bit of background
 In the past I used phpIPAM and I wrote a similar script for phpIPAM. But I moved to NetBox for a few reasons (more features, much better API). In phpIPAM, I didn't use any of its features which were not available in NetBox), so for me the move was easy and fast.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMTQwNzcwOSwxNTE1Njg2NTg0LC03Nj
-Q2NzY1MDQsMTI2NjQ1MjM1OSwzNDMwODc0NzAsLTE4MjU0MTMw
-OTAsOTU1NzA3NTY4LDEyODg1NjQ0NjksNTkxOTU4ODA3LC03Mj
-k0MjE0MDldfQ==
+eyJoaXN0b3J5IjpbLTIwNDgwNDUzOCwxODMxNDA3NzA5LDE1MT
+U2ODY1ODQsLTc2NDY3NjUwNCwxMjY2NDUyMzU5LDM0MzA4NzQ3
+MCwtMTgyNTQxMzA5MCw5NTU3MDc1NjgsMTI4ODU2NDQ2OSw1OT
+E5NTg4MDcsLTcyOTQyMTQwOV19
 -->
