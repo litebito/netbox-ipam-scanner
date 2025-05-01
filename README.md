@@ -71,7 +71,15 @@ group_name = to organize the CF visibly in the NetBox UI
 
 ## netbox_ipam_scanner.toml
 Config file to set various options/variables to match you environment:
-- NMAP: 
+
+[NMAP]: 
+- your DNS servers
+- the location of the scan files
+
+[LOGGING]:
+- directory location of the logs
+- name of the log file
+- 
 
 ## netbox_ipam_scanner_init.py
 This script is called from the main script.
@@ -84,5 +92,5 @@ This script will
 
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5NzQwMTE5OCwtNzI5NDIxNDA5XX0=
+eyJoaXN0b3J5IjpbLTk3MTE2OTM3MSwtNzI5NDIxNDA5XX0=
 -->
