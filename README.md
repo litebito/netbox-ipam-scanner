@@ -187,18 +187,18 @@ You can download the required database for free. In the directory where you want
 Use at your own risk, I'm not responsible for how the script reacts with or impacts your environment.
 **ALWAYS take a backup before trying community contributions**
 I'm not a Python developer, so the scripts may not be flawless. 
-If you run into an issue, report them them in "Issues" and we'll try to resolve it 
+If you run into an issue, report them them in "Issues" and we'll try to resolve it.
 If you want to suggest bug-fixes, please do, it will make the scripts better. (if you like to collaborate on the script, let me know)
-Feel free to suggest improvements or optimi, if they are viable, we can work together to add them.
+Feel free to suggest improvements or optimizations, if they are viable, we can work together to add them.
 
 
 
 ### A little bit of background
 In the past I used phpIPAM and I wrote a similar script for phpIPAM. But I moved to NetBox for a few reasons (more features, much better API). In phpIPAM, I didn't use any of its features which were not available in NetBox), so for me the move was easy and fast.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3MDQzOTE3NywtMTQ2MTY1MTg5Niw1Nz
-A0MDIwMjgsNTcwNDAyMDI4LDI3MjA5MjE5MiwxODMxNDA3NzA5
-LDE1MTU2ODY1ODQsLTc2NDY3NjUwNCwxMjY2NDUyMzU5LDM0Mz
-A4NzQ3MCwtMTgyNTQxMzA5MCw5NTU3MDc1NjgsMTI4ODU2NDQ2
-OSw1OTE5NTg4MDcsLTcyOTQyMTQwOV19
+eyJoaXN0b3J5IjpbLTE3MDYwODMzNDUsLTE0NjE2NTE4OTYsNT
+cwNDAyMDI4LDU3MDQwMjAyOCwyNzIwOTIxOTIsMTgzMTQwNzcw
+OSwxNTE1Njg2NTg0LC03NjQ2NzY1MDQsMTI2NjQ1MjM1OSwzND
+MwODc0NzAsLTE4MjU0MTMwOTAsOTU1NzA3NTY4LDEyODg1NjQ0
+NjksNTkxOTU4ODA3LC03Mjk0MjE0MDldfQ==
 -->
