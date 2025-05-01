@@ -69,6 +69,7 @@ group_name = to organize the CF visibly in the NetBox UI
 - cf_dcim_mac_online = Was this MAC active/online during the last (most recent) scan
 - cf_dcim_mac_scanner_info = Used to store other info from the scanner
 
+## Wo
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyOTQyMTQwOV19
+eyJoaXN0b3J5IjpbLTYzNTA5MTUzNywtNzI5NDIxNDA5XX0=
 -->
