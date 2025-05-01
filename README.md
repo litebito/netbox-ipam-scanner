@@ -177,9 +177,11 @@ Use at your own risk, I'm not responsible for how the script reacts with or impa
 ALWAYS take a backup before trying community contributions
 
 I'm not a Python developer, so the scripts may not be flawless. 
-If you run into an issue, report them thr
+If you run into an issue, report them them in "Issues" and we'll try to resolve it
+If you want to suggest bugfixes, please do, it will make the scripts better.
+If you want to suggest improvements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjE1ODY1NDgsMzQzMDg3NDcwLC0xOD
+eyJoaXN0b3J5IjpbLTE5Njg1ODQyNTMsMzQzMDg3NDcwLC0xOD
 I1NDEzMDkwLDk1NTcwNzU2OCwxMjg4NTY0NDY5LDU5MTk1ODgw
 NywtNzI5NDIxNDA5XX0=
 -->
