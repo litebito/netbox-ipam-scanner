@@ -11,7 +11,7 @@ As for the scripts, some decisions I took for the basics
 - I decided to use NMAP as the main scan tool, as it is much more efficient for scanning, and offers most flexibility.
 - The (data) input for the script comes 100% from NetBox (except for the configuration values of course), no other intermediate files
 - Prefixes will be scanned one by one, but in case of parent/child relation, only the child prefixes will be scanned (to avoid scanning enormous ranges)
-- I decided not to use (and change) the default status field of NetBox, in case these are already in use for different purposes in your environment
+- I decided not to use (and change) the default status field of NetBox, in case these are already in use for different purposes in your environment. 
 - The hostname (DSN FQDN) is retrieved during the scan when the IP is active, it remains untouched in NetBox, even if the IP address is offline. If the hostname is different when the scan discovers the IP again, it should automatically update from the scan.
 - Although NMAP can provide the vendor for a MAC address, I found that it was not able to do so for a lot of MAC addresses, so I decided to use the external OUI db to get better data.
 - For now, I decided to stick with 2 script files (I know it is not the "Python way" but it keeps it a bit easier for me now). When I expand the scripts more, I'll probably will split them more the Python way
@@ -196,9 +196,9 @@ Feel free to suggest improvements or optimizations, if they are viable, we can w
 ### A little bit of background
 In the past I used phpIPAM and I wrote a similar script for phpIPAM. But I moved to NetBox for a few reasons (more features, much better API). In phpIPAM, I didn't use any of its features which were not available in NetBox), so for me the move was easy and fast.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDYwODMzNDUsLTE0NjE2NTE4OTYsNT
-cwNDAyMDI4LDU3MDQwMjAyOCwyNzIwOTIxOTIsMTgzMTQwNzcw
-OSwxNTE1Njg2NTg0LC03NjQ2NzY1MDQsMTI2NjQ1MjM1OSwzND
-MwODc0NzAsLTE4MjU0MTMwOTAsOTU1NzA3NTY4LDEyODg1NjQ0
-NjksNTkxOTU4ODA3LC03Mjk0MjE0MDldfQ==
+eyJoaXN0b3J5IjpbMTM3NDMxNTc0NSwtMTcwNjA4MzM0NSwtMT
+Q2MTY1MTg5Niw1NzA0MDIwMjgsNTcwNDAyMDI4LDI3MjA5MjE5
+MiwxODMxNDA3NzA5LDE1MTU2ODY1ODQsLTc2NDY3NjUwNCwxMj
+Y2NDUyMzU5LDM0MzA4NzQ3MCwtMTgyNTQxMzA5MCw5NTU3MDc1
+NjgsMTI4ODU2NDQ2OSw1OTE5NTg4MDcsLTcyOTQyMTQwOV19
 -->
