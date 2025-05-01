@@ -117,12 +117,13 @@ This script will
 	-	if you put it somewhere else, don't forget to update the path in the config file
 3. Rename netbox_ipam_scanner_conf_DIST.toml to netbox_ipam_scanner_conf.toml
 	- Update the netbox_ipam_scanner_conf file with your settings/options
-4. Run the script manually the first time (check for errors)
-
- /opt/netbox/venv/bin/python3.12 /opt/netbox/scripts/netbox_ipam_scanner.py
-
-
+4. Run the script manually the first time (check for errors):
+```
+/opt/netbox/venv/bin/python3.12 /opt/netbox/scripts/netbox_ipam_scanner.py
+```
+5. Schedule it via cron, for example:
+	- create 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTA5OTU0LDk1NTcwNzU2OCwxMjg4NT
-Y0NDY5LDU5MTk1ODgwNywtNzI5NDIxNDA5XX0=
+eyJoaXN0b3J5IjpbLTE5MjU1MDg4MjMsOTU1NzA3NTY4LDEyOD
+g1NjQ0NjksNTkxOTU4ODA3LC03Mjk0MjE0MDldfQ==
 -->
