@@ -90,8 +90,9 @@ This script will
  
  ## netbox_ipam_scanner.py
  This script will:
- - Fetch
+ - Fetch the prefixes which are set to be scanned (cf_ipam_prefix_discoverscan)
+ - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODEwMDU3NTcsNTkxOTU4ODA3LC03Mj
+eyJoaXN0b3J5IjpbLTE2MDA1MTc3NTAsNTkxOTU4ODA3LC03Mj
 k0MjE0MDldfQ==
 -->
