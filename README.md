@@ -114,7 +114,18 @@ This script will
 ### 3.1 Create the NetBox API token and permissions
 You will need to create (in this order) a permissions set, a user_id, an API token
 1. In NetBox, go to Authentication, create a permission set, for example ***perm_api_ipam_scanner*** and configure this as follows:
-	-	Enabled
+	-	Enabled: True
+	-	Actions : Enable Can View, Can Add, Can Change, Can Delete
+	-	Select the following object types:
+-   DCIM | interface
+-   DCIM | device
+-   DCIM | MAC address
+-   IPAM | IP address
+-   IPAM | prefix
+-   IPAM | VLAN
+-   IPAM | IP range
+-   Extras | custom field
+-   Extras | custom field choice set
 3. 
 ### 3.2 The basics
 1. Copy the 2 script files and the toml file to the main script directory in your NetBox directory
@@ -152,7 +163,7 @@ You can download the required database for free. In the directory where you want
 wget -v -d https://maclookup.app/downloads/json-database/get-db -O mac_oui_db.json
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM1OTYwODc2LC0xODI1NDEzMDkwLDk1NT
+eyJoaXN0b3J5IjpbNTc2NzE0OTQ0LC0xODI1NDEzMDkwLDk1NT
 cwNzU2OCwxMjg4NTY0NDY5LDU5MTk1ODgwNywtNzI5NDIxNDA5
 XX0=
 -->
