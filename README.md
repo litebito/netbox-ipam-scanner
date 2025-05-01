@@ -182,9 +182,9 @@ Feel free to suggest improvements, if they are viable, we can work together to a
 
 
 ### A little bit of background
-I moved from phpIPAM to NetBox, and I wrote a similar script for phpIPAM (https://github.com/litebito/phpipam-scripts). I moved to NetBox for a few reasons (more features, much better API). In phpIPAM, I didn't use any of its features which were not available in NetBox), so for me the move was easy and fast.
+In the past I used phpIPAM and I wrote a similar script for phpIPAM. But I moved to NetBox for a few reasons (more features, much better API). In phpIPAM, I didn't use any of its features which were not available in NetBox), so for me the move was easy and fast.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2NDY3NjUwNCwxMjY2NDUyMzU5LDM0Mz
-A4NzQ3MCwtMTgyNTQxMzA5MCw5NTU3MDc1NjgsMTI4ODU2NDQ2
-OSw1OTE5NTg4MDcsLTcyOTQyMTQwOV19
+eyJoaXN0b3J5IjpbMzAyNzU1ODAyLC03NjQ2NzY1MDQsMTI2Nj
+Q1MjM1OSwzNDMwODc0NzAsLTE4MjU0MTMwOTAsOTU1NzA3NTY4
+LDEyODg1NjQ0NjksNTkxOTU4ODA3LC03Mjk0MjE0MDldfQ==
 -->
