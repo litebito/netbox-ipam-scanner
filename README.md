@@ -6,11 +6,11 @@ I initially wanted to create a plugin for this, but as I'm not a seasoned Python
 
 I also know that this script is a little bit against NetBox's core philosophy (NetBox being a SSOT).
 
-As for the scripts:
+As for the scripts, some decisions I took for the basics
 - I decided to use NMAP as the main scan tool, as it offers most flexibility now and future use.
 - The (data) input for the script comes 100% from NetBox (except for the configuration values of course), no other intermediate files
-- I decided not to use (and change) the built in status field of NetBox, in case you already use this for different purposes in your environment
-- 
+- I decided not to use (and change) the built in status field of NetBox, in case these are already in use for different purposes in your environment
+- The hostnam
 
 
 
@@ -192,7 +192,7 @@ Feel free to suggest improvements, if they are viable, we can work together to a
 ### A little bit of background
 In the past I used phpIPAM and I wrote a similar script for phpIPAM. But I moved to NetBox for a few reasons (more features, much better API). In phpIPAM, I didn't use any of its features which were not available in NetBox), so for me the move was easy and fast.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzODE5MDMzNywtNzY0Njc2NTA0LDEyNj
+eyJoaXN0b3J5IjpbMTY4OTYwOTU3OSwtNzY0Njc2NTA0LDEyNj
 Y0NTIzNTksMzQzMDg3NDcwLC0xODI1NDEzMDkwLDk1NTcwNzU2
 OCwxMjg4NTY0NDY5LDU5MTk1ODgwNywtNzI5NDIxNDA5XX0=
 -->
