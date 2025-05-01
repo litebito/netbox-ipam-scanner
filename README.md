@@ -9,7 +9,7 @@ I decided to use NMAP as the main scan tool, as it offers most flexibility now a
 I made this script for my use case, but decided to share it, in case it is useful for others.
 
 **Warning**:
-- make sure 
+- ensure you have a NetBox data backup before using this script the first time (you should take a daily backup anyway)
 
 ## Prerequisites
 - NetBox 4.2.5+ (script developed and tested from 4.2.5 and later) on a linux server
@@ -110,6 +110,6 @@ This script will
 	- update days offline
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjUzOTMwMDk2LDEyODg1NjQ0NjksNTkxOT
+eyJoaXN0b3J5IjpbOTU1NzA3NTY4LDEyODg1NjQ0NjksNTkxOT
 U4ODA3LC03Mjk0MjE0MDldfQ==
 -->
