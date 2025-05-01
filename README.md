@@ -8,7 +8,8 @@ I also know that this script is a little bit against NetBox's core philosophy (N
 
 As for the scripts:
 - I decided to use NMAP as the main scan tool, as it offers most flexibility now and future use.
-- The (data) input for the script comes 100% from NetBox (except for the configuration values of course)
+- The (data) input for the script comes 100% from NetBox (except for the configuration values of course), no other intermediate files
+- 
 
 
 
@@ -190,7 +191,7 @@ Feel free to suggest improvements, if they are viable, we can work together to a
 ### A little bit of background
 In the past I used phpIPAM and I wrote a similar script for phpIPAM. But I moved to NetBox for a few reasons (more features, much better API). In phpIPAM, I didn't use any of its features which were not available in NetBox), so for me the move was easy and fast.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY0OTQzNjUyLC03NjQ2NzY1MDQsMTI2Nj
-Q1MjM1OSwzNDMwODc0NzAsLTE4MjU0MTMwOTAsOTU1NzA3NTY4
-LDEyODg1NjQ0NjksNTkxOTU4ODA3LC03Mjk0MjE0MDldfQ==
+eyJoaXN0b3J5IjpbLTE0MjgyOTA2OTIsLTc2NDY3NjUwNCwxMj
+Y2NDUyMzU5LDM0MzA4NzQ3MCwtMTgyNTQxMzA5MCw5NTU3MDc1
+NjgsMTI4ODU2NDQ2OSw1OTE5NTg4MDcsLTcyOTQyMTQwOV19
 -->
