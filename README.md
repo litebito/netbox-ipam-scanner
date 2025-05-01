@@ -110,7 +110,7 @@ This script will
 	- update days offline
 
 # How to install
-##
+### The basics
 1. Copy the 2 script files and the toml file to the main script directory in your NetBox directory
 	 - if you installed netbox in /opt/netbox, copy the files to /opt/netbox/scripts
 2. Copy or download the mac_oui_db.json 
@@ -122,7 +122,8 @@ This script will
 ```
 /opt/netbox/venv/bin/python3.12 /opt/netbox/scripts/netbox_ipam_scanner.py
 ```
-5. Schedule it via cron, for example:
+### Schedule it
+1. Schedule it via cron, for example:
 	- create /etc/cron.d/netbox-scripts
 ```
 SHELL=/bin/bash
@@ -140,8 +141,11 @@ MAILTO=""
 ```
 -	this will make it run every 15 minutes (adapt to your needs)
 
+### The OUI database.
+You can download the required database for free. In the directory where you 
+wget -v -d https://maclookup.app/downloads/json-database/get-db -O mac_oui_db.json
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4MDQxMjIxNSw5NTU3MDc1NjgsMTI4OD
-U2NDQ2OSw1OTE5NTg4MDcsLTcyOTQyMTQwOV19
+eyJoaXN0b3J5IjpbMzkxMjgwNzQ4LDk1NTcwNzU2OCwxMjg4NT
+Y0NDY5LDU5MTk1ODgwNywtNzI5NDIxNDA5XX0=
 -->
