@@ -23,9 +23,10 @@ This is not the end or final script, I've some ideas I want to add in the near f
 ### Prerequisites
 - NetBox 4.2.5+ (script developed and tested from 4.2.5 and later) on a linux server
 - Python 3.12+ (script developed and tested with Python 3.12, it may need some adaptation for 3.10 and 3.11)
-- nmap installed
-- the OUI database in JSON format from https://maclookup.app
-- a NetBox API token with the correct permissions
+- Nmap installed
+- The OUI database in JSON format from https://maclookup.app
+- A NetBox API token with the correct permissions
+- The script requires that online/active hosts are pingable (I'll try to add other scan options later)
 
 ## 1. What does the NetBox IPAM scanner do
 
@@ -193,8 +194,8 @@ Feel free to suggest improvements, if they are viable, we can work together to a
 ### A little bit of background
 In the past I used phpIPAM and I wrote a similar script for phpIPAM. But I moved to NetBox for a few reasons (more features, much better API). In phpIPAM, I didn't use any of its features which were not available in NetBox), so for me the move was easy and fast.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjcyMDkyMTkyLDE4MzE0MDc3MDksMTUxNT
-Y4NjU4NCwtNzY0Njc2NTA0LDEyNjY0NTIzNTksMzQzMDg3NDcw
-LC0xODI1NDEzMDkwLDk1NTcwNzU2OCwxMjg4NTY0NDY5LDU5MT
-k1ODgwNywtNzI5NDIxNDA5XX0=
+eyJoaXN0b3J5IjpbMTc0MTQ0NDc0MiwyNzIwOTIxOTIsMTgzMT
+QwNzcwOSwxNTE1Njg2NTg0LC03NjQ2NzY1MDQsMTI2NjQ1MjM1
+OSwzNDMwODc0NzAsLTE4MjU0MTMwOTAsOTU1NzA3NTY4LDEyOD
+g1NjQ0NjksNTkxOTU4ODA3LC03Mjk0MjE0MDldfQ==
 -->
