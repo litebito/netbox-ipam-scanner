@@ -83,10 +83,13 @@ Config file to set various options/variables to match you environment:
 
 [netbox]:
 - url = your NetBox URL
-- your NetBox token
-- verify ssl = set to false if you are working with self signed certs
-- page size = pagination for the NetBox REST API (set lower if you experience timeout issues), 100 is a good default value
+- token = your NetBox token
+- verify_ssl = set to false if you are working with self signed certs
+- page_size = pagination for the NetBox REST API (set lower if you experience timeout issues), 100 is a good default value
 - ipmac_link_expiration = 30
+
+[options]:
+- enable_scan_nmap = 
 
 ## netbox_ipam_scanner_init.py
 This script is called from the main script.
@@ -99,5 +102,5 @@ This script will
 
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDAxOTI3NTk5LC03Mjk0MjE0MDldfQ==
+eyJoaXN0b3J5IjpbMTI4NzIyODc1MSwtNzI5NDIxNDA5XX0=
 -->
