@@ -10,7 +10,7 @@ As for the scripts, some decisions I took for the basics
 - I decided to use NMAP as the main scan tool, as it offers most flexibility now and future use.
 - The (data) input for the script comes 100% from NetBox (except for the configuration values of course), no other intermediate files
 - I decided not to use (and change) the built in status field of NetBox, in case these are already in use for different purposes in your environment
-- The hostnam
+- The hostname (DSN FQDN) is retrieved during the scan when the IP is active, it remains untouched in NetBox, even if the IP address is offline. If the hostname is different when the scan the IP comes online again, it should automatically update from the scan.
 
 
 
@@ -192,7 +192,7 @@ Feel free to suggest improvements, if they are viable, we can work together to a
 ### A little bit of background
 In the past I used phpIPAM and I wrote a similar script for phpIPAM. But I moved to NetBox for a few reasons (more features, much better API). In phpIPAM, I didn't use any of its features which were not available in NetBox), so for me the move was easy and fast.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4OTYwOTU3OSwtNzY0Njc2NTA0LDEyNj
+eyJoaXN0b3J5IjpbMTY2OTM2OTM3NiwtNzY0Njc2NTA0LDEyNj
 Y0NTIzNTksMzQzMDg3NDcwLC0xODI1NDEzMDkwLDk1NTcwNzU2
 OCwxMjg4NTY0NDY5LDU5MTk1ODgwNywtNzI5NDIxNDA5XX0=
 -->
