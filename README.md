@@ -91,8 +91,12 @@ This script will
  ## netbox_ipam_scanner.py
  This script will:
  - Fetch the prefixes which are set to be scanned (cf_ipam_prefix_discoverscan)
+ - For each fetched prefix, launch an nmap scan for the whole subnet
+ - Parse the scan results
+ - Create/update IP addresses from the scan in NetBox
  - 
+ - Create/update MAC addresses from the scan in NetBox
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDA1MTc3NTAsNTkxOTU4ODA3LC03Mj
-k0MjE0MDldfQ==
+eyJoaXN0b3J5IjpbMTMyOTAyNjE2Myw1OTE5NTg4MDcsLTcyOT
+QyMTQwOV19
 -->
