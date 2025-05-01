@@ -94,9 +94,11 @@ This script will
  - For each fetched prefix, launch an nmap scan for the whole subnet
  - Parse the scan results
  - Create/update IP addresses from the scan in NetBox
- - 
+	 - update first/last seen
+	 - update days offline (if the IP was not present in the scan)
+	 - update MAC address link
  - Create/update MAC addresses from the scan in NetBox
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyOTAyNjE2Myw1OTE5NTg4MDcsLTcyOT
+eyJoaXN0b3J5IjpbMTI4ODU2NDQ2OSw1OTE5NTg4MDcsLTcyOT
 QyMTQwOV19
 -->
