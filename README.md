@@ -129,7 +129,10 @@ You will need to create (in this order) a permissions set, a user_id, an API tok
 				-   Extras | custom field choice set
 3. go to Authentication > Users, create a user, for example ***autom_ipam_scanner*** and configure the user as follows:
 	-	Set status to "Active" and "Staff Active"
-	-	In thee drop down "Permissions" select the permission set you just created (from the example: 
+	-	In thee drop down "Permissions" select the permission set you just created (from the example above: perm_api_ipam_scanner)
+4. go to Authentication > API, create a new token, and configure the token as follows:
+	-	Select the user you just created
+	-	
 ### 3.2 The basics
 1. Copy the 2 script files and the toml file to the main script directory in your NetBox directory
 	 - if you installed netbox in /opt/netbox, copy the files to /opt/netbox/scripts
@@ -166,7 +169,7 @@ You can download the required database for free. In the directory where you want
 wget -v -d https://maclookup.app/downloads/json-database/get-db -O mac_oui_db.json
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODI4NDc1NTcsLTE4MjU0MTMwOTAsOT
+eyJoaXN0b3J5IjpbLTEyNDEzODQ0MTQsLTE4MjU0MTMwOTAsOT
 U1NzA3NTY4LDEyODg1NjQ0NjksNTkxOTU4ODA3LC03Mjk0MjE0
 MDldfQ==
 -->
