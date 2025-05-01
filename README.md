@@ -8,6 +8,9 @@ I decided to use NMAP as the main scan tool, as it offers most flexibility now a
 
 I made this script for my use case, but decided to share it, in case it is useful for others.
 
+**Warning**:
+- make sure 
+
 ## Prerequisites
 - NetBox 4.2.5+ (script developed and tested from 4.2.5 and later) on a linux server
 - Python 3.12+ (script developed and tested with Python 3.12, it may need some adaptation for 3.10 and 3.11)
@@ -98,10 +101,15 @@ This script will
 	 - update days offline to 0
 	 - update MAC address link
  - Create/update MAC addresses from the scan in NetBox
- - 	 - update first/last seen
-		 - update days offline (if the MAC was not present in the scan)
-		 - update IP address link
+ 	 - update first/last seen
+	 - update days offline to 0
+	 - update IP address link
+- Process offline IP's
+	- update days offline
+- Process offline MAC's
+	- update days offline
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDE4NDEzMzgsMTI4ODU2NDQ2OSw1OT
-E5NTg4MDcsLTcyOTQyMTQwOV19
+eyJoaXN0b3J5IjpbMjUzOTMwMDk2LDEyODg1NjQ0NjksNTkxOT
+U4ODA3LC03Mjk0MjE0MDldfQ==
 -->
