@@ -73,17 +73,18 @@ group_name = to organize the CF visibly in the NetBox UI
 Config file to set various options/variables to match you environment. Explanation for each setting is in the file itself.
 
 
-
 ## netbox_ipam_scanner_init.py
 This script is called from the main script.
 
 This script will
-- Read the toml configuration file 
-- Check and create the custom fields
+- Read the netbox_ipam_scanner.toml configuration file 
+- Check CF and create missing CF 
+- Initialize the logger
 - 
  
 
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkxOTU4ODA3LC03Mjk0MjE0MDldfQ==
+eyJoaXN0b3J5IjpbNzgxNzgxNTU5LDU5MTk1ODgwNywtNzI5ND
+IxNDA5XX0=
 -->
