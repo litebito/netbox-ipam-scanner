@@ -7,7 +7,7 @@ I initially wanted to create a plugin for this, but as I'm not a seasoned Python
 I also know that this script is a little bit against NetBox's core philosophy (NetBox being a SSOT), but I've seen a lot of users (like myself) wanting an IPAM or IP scanner, so I decided to share my efforts in case it is useful for others.
 
 As for the scripts, some decisions I took for the basics
-- I decided not to use pyNetbox but the NetBox API directly, to avoid other dependencies and 
+- I decided not to use pyNetbox but the NetBox API directly, to avoid other dependencies and control the data and actions better
 - I decided to use NMAP as the main scan tool, as it is much more efficient for scanning, and offers most flexibility.
 - The (data) input for the script comes 100% from NetBox (except for the configuration values of course), no other intermediate files
 - Prefixes will be scanned one by one, but in case of parent/child relation, only the child prefixes will be scanned (to avoid scanning enormous ranges)
@@ -196,9 +196,9 @@ Feel free to suggest improvements, if they are viable, we can work together to a
 ### A little bit of background
 In the past I used phpIPAM and I wrote a similar script for phpIPAM. But I moved to NetBox for a few reasons (more features, much better API). In phpIPAM, I didn't use any of its features which were not available in NetBox), so for me the move was easy and fast.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU3MDI2ODM0LDU3MDQwMjAyOCw1NzA0MD
-IwMjgsMjcyMDkyMTkyLDE4MzE0MDc3MDksMTUxNTY4NjU4NCwt
-NzY0Njc2NTA0LDEyNjY0NTIzNTksMzQzMDg3NDcwLC0xODI1ND
-EzMDkwLDk1NTcwNzU2OCwxMjg4NTY0NDY5LDU5MTk1ODgwNywt
-NzI5NDIxNDA5XX0=
+eyJoaXN0b3J5IjpbLTE0NjE2NTE4OTYsNTcwNDAyMDI4LDU3MD
+QwMjAyOCwyNzIwOTIxOTIsMTgzMTQwNzcwOSwxNTE1Njg2NTg0
+LC03NjQ2NzY1MDQsMTI2NjQ1MjM1OSwzNDMwODc0NzAsLTE4Mj
+U0MTMwOTAsOTU1NzA3NTY4LDEyODg1NjQ0NjksNTkxOTU4ODA3
+LC03Mjk0MjE0MDldfQ==
 -->
