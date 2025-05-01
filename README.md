@@ -10,7 +10,7 @@ I made this script for my use case, but decided to share it, in case it is usefu
 
 ## Prerequisites
 - NetBox 4.2.5+ (script developed and tested from 4.2.5 and later) on a linux server
-- Python 3.12+ (
+- Python 3.12+ (script developed and tested with Python 3.12, it may need some adaptation for 3.10 and 3.11)
 - nmap installed
 - the OUI database in JSON format from https://maclookup.app
 
@@ -92,6 +92,6 @@ This script will
 
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMDQ1ODM4Niw1OTE5NTg4MDcsLTcyOT
+eyJoaXN0b3J5IjpbMTIzMDQ4NTY0Miw1OTE5NTg4MDcsLTcyOT
 QyMTQwOV19
 -->
