@@ -95,10 +95,13 @@ This script will
  - Parse the scan results
  - Create/update IP addresses from the scan in NetBox
 	 - update first/last seen
-	 - update days offline (if the IP was not present in the scan)
+	 - update days offline to 0
 	 - update MAC address link
  - Create/update MAC addresses from the scan in NetBox
+ - 	 - update first/last seen
+		 - update days offline (if the MAC was not present in the scan)
+		 - update IP address link
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4ODU2NDQ2OSw1OTE5NTg4MDcsLTcyOT
-QyMTQwOV19
+eyJoaXN0b3J5IjpbLTIwNDE4NDEzMzgsMTI4ODU2NDQ2OSw1OT
+E5NTg4MDcsLTcyOTQyMTQwOV19
 -->
