@@ -122,8 +122,23 @@ This script will
 /opt/netbox/venv/bin/python3.12 /opt/netbox/scripts/netbox_ipam_scanner.py
 ```
 5. Schedule it via cron, for example:
-	- create 
+	- create /etc/cron.d/netbox-scripts
+```
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=""
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name  command to be executed
+*/15 * * * * root /opt/netbox/venv/bin/python3.12 /opt/netbox/scripts/netbox_ipam_scanner.py >> /var/log/netbox/netbox_ipam_scanner.cron.log 2>&1
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjU1MDg4MjMsOTU1NzA3NTY4LDEyOD
-g1NjQ0NjksNTkxOTU4ODA3LC03Mjk0MjE0MDldfQ==
+eyJoaXN0b3J5IjpbNjYyNjM4NzQ4LDk1NTcwNzU2OCwxMjg4NT
+Y0NDY5LDU5MTk1ODgwNywtNzI5NDIxNDA5XX0=
 -->
