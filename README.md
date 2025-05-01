@@ -110,9 +110,11 @@ This script will
 	- update days offline
 
 # How to install
-Copy the 2 script files and the toml file to your NetBox directory, e.g.
-/opt/netbox/scripts
+1. Copy the 2 script files and the toml file to the script directory in your NetBox directory, e.g. /opt/netbox/scripts
+2. Copy the mac_oui_db.json 
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzIxODAwOTgsOTU1NzA3NTY4LDEyOD
-g1NjQ0NjksNTkxOTU4ODA3LC03Mjk0MjE0MDldfQ==
+eyJoaXN0b3J5IjpbLTQ3OTU4MDg5MSw5NTU3MDc1NjgsMTI4OD
+U2NDQ2OSw1OTE5NTg4MDcsLTcyOTQyMTQwOV19
 -->
