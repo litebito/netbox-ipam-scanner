@@ -8,6 +8,8 @@ I decided to use NMAP as the main scan tool, as it offers most flexibility now a
 
 I made this script for my use case, but decided to share it, in case it is useful for others.
 
+## Prerequisites
+
 # What does the NetBox IPAM scanner do
 
 ## Discovery & Update
@@ -86,6 +88,6 @@ This script will
 
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyNjAxMDE0NSw1OTE5NTg4MDcsLTcyOT
+eyJoaXN0b3J5IjpbMTU3ODA1MDc4NCw1OTE5NTg4MDcsLTcyOT
 QyMTQwOV19
 -->
