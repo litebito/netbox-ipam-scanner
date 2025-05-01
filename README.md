@@ -1,7 +1,9 @@
 # NetBox IPAM Scanner
 
 The **NetBox IPAM Scanner** is a NetBox / Python script which uses NMAP to scan the IPAM prefixes for online ip addresses to check which ones are live, add newly found ip addresses to the IPAM module in NetBox, and collect some additional information for IPAM use.
-(
+
+BackgroundI moved from phpIPAM to NetBox, and I wrote a similar script for phpIPAM (https://github.com/litebito/phpipam-scripts)
+
 I initially wanted to create a plugin for this, but as I'm not a seasoned Python dev, and to optimize the time I could spend on it, I decided to stick with a script. Also, because most activity would happen in the background anyway, I didn't see the big advantage of creating a plugin for it (except maybe for creating the necessary custom fields automatically)
 
 I decided to use NMAP as the main scan tool, as it offers most flexibility now and future use.
@@ -179,7 +181,7 @@ If you run into an issue, report them them in "Issues" and we'll try to resolve 
 If you want to suggest bug-fixes, please do, it will make the scripts better. (if you like to collaborate on the script, let me know)
 Feel free to suggest improvements, if they are viable, we can work together to add them.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYyNjg4OSwxMjY2NDUyMzU5LDM0MzA4Nz
-Q3MCwtMTgyNTQxMzA5MCw5NTU3MDc1NjgsMTI4ODU2NDQ2OSw1
-OTE5NTg4MDcsLTcyOTQyMTQwOV19
+eyJoaXN0b3J5IjpbLTYwMzkxNTk0NywxMjY2NDUyMzU5LDM0Mz
+A4NzQ3MCwtMTgyNTQxMzA5MCw5NTU3MDc1NjgsMTI4ODU2NDQ2
+OSw1OTE5NTg4MDcsLTcyOTQyMTQwOV19
 -->
