@@ -80,11 +80,12 @@ This script will
 - Read the netbox_ipam_scanner.toml configuration file 
 - Check CF and create missing CF 
 - Initialize the logger
-- 
+- Initialize the API session and a paged get function
+- Load the OUI database
  
 
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzgxNzgxNTU5LDU5MTk1ODgwNywtNzI5ND
-IxNDA5XX0=
+eyJoaXN0b3J5IjpbLTYyNjAxMDE0NSw1OTE5NTg4MDcsLTcyOT
+QyMTQwOV19
 -->
