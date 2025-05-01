@@ -80,8 +80,7 @@ Config file to set various options/variables to match you environment. Explanati
 
 
 ## netbox_ipam_scanner_init.py
-This script is called from the main script.
-
+Called from the main script, do not run it directly
 This script will
 - Read the netbox_ipam_scanner.toml configuration file 
 - Check CF and create missing CF 
@@ -89,9 +88,10 @@ This script will
 - Initialize the API session and a paged get function
 - Load the OUI database
  
-
- 
+ ## netbox_ipam_scanner.py
+ This script will:
+ -
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMDQ4NTY0Miw1OTE5NTg4MDcsLTcyOT
+eyJoaXN0b3J5IjpbMTc4MTExMjI1Myw1OTE5NTg4MDcsLTcyOT
 QyMTQwOV19
 -->
