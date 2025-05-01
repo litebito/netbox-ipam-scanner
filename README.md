@@ -11,15 +11,15 @@ I made this script for my use case, but decided to share it, in case it is usefu
 **Warning**:
 - ensure you have a NetBox data backup before using this script the first time (you should take a daily backup anyway)
 
-## Prerequisites
+### Prerequisites
 - NetBox 4.2.5+ (script developed and tested from 4.2.5 and later) on a linux server
 - Python 3.12+ (script developed and tested with Python 3.12, it may need some adaptation for 3.10 and 3.11)
 - nmap installed
 - the OUI database in JSON format from https://maclookup.app
 
-# What does the NetBox IPAM scanner do
+## 1. What does the NetBox IPAM scanner do
 
-## Discovery & Update
+### Discovery & Update
 The script will loop through all the defined Prefixes in the IPAM module. For each prefix where the custom field (CF) cf_ipam_prefix_discoverscan is True or not set, it will start a subnet scan with NMAP. 
 
 (Update) It will update existing IP addresses with info from the scan.
@@ -27,19 +27,19 @@ The script will loop through all the defined Prefixes in the IPAM module. For ea
 
 I run the script every 15 minutes through cron.
 
-## Experimental
+### Experimental
 It will also add the MAC address info from the scan into the DCIM (MAC address) module.
 It will link the IP address to that MAC address, and the MAC address to that IP address.
 
 *For the network engineers out there, we know that ARP information is only available in the vlan the server is connected to (and NMAP's MAC address info comes from ARP responses). Scans of other subnets across L3 (router) will not return MAC address information. There are other methods to get that MAC address info, but I didn't had the time to work on that yet.*
 
-# How does it work
+## 2. How does it work
 There are 3 files:
  - **netbox_ipam_scanner.toml** : file with the configuration variables
  - **netbox_ipam_scanner_init.py** : script doing all needed initialization (it is called from the main scanner script)
  - **netbox_ipam_scanner.py** : main scanner script
 
-## Custom fields
+### 2.1 Custom fields
 
 The script needs a number of custom fields (CF) defined. To make it easy, these CF are checked and ***automatically created*** if missing by **netbox_ipam_scanner_init.py** on its first run, or when CF are accidentally renamed or removed. Check these CF before running the scripts, the make sure you don't have any conflicts.
 They may not all be useful for everyone, but they are to me in my specific use case.
@@ -53,7 +53,7 @@ related_object_type = for linked fields, the linked object
 group_name = to organize the CF visibly in the NetBox UI 
 (I used 2 groups: "Details" when the field leans more to additional details of the object; "Discovery Info" when the field leans more to discovery information)
 
-### Here is the list of CF with their purpose:
+#### Here is the list of CF with their purpose:
 **CF added to IPAM > Prefix**
 - cf_ipam_prefix_discoverscan = Setting (true/false or on/off) to allow (or prevent) the prefix to be scanned. To set manually.
 
@@ -78,11 +78,11 @@ group_name = to organize the CF visibly in the NetBox UI
 - cf_dcim_mac_online = Was this MAC active/online during the last (most recent) scan
 - cf_dcim_mac_scanner_info = Used to store other info from the scanner
 
-## netbox_ipam_scanner.toml
+### 2.2 netbox_ipam_scanner.toml
 Config file to set various options/variables to match you environment. Explanation for each setting is in the file itself.
 
 
-## netbox_ipam_scanner_init.py
+### 2.3 netbox_ipam_scanner_init.py
 Called from the main script, do not run it directly
 This script will
 - Read the netbox_ipam_scanner.toml configuration file 
@@ -109,7 +109,43 @@ This script will
 - Process offline MAC's
 	- update days offline
 
+## 3. How to install
+### 3.1 The basics
+1. Copy the 2 script files and the toml file to the main script directory in your NetBox directory
+	 - if you installed netbox in /opt/netbox, copy the files to /opt/netbox/scripts
+2. Copy or download the mac_oui_db.json 
+	-	the easiest is to put the file in the same directory as the scripts
+	-	if you put it somewhere else, don't forget to update the path in the config file
+3. Rename netbox_ipam_scanner_conf_DIST.toml to netbox_ipam_scanner_conf.toml
+	- Update the netbox_ipam_scanner_conf file with your settings/options
+4. Run the script manually the first time (check for errors):
+```
+/opt/netbox/venv/bin/python3.12 /opt/netbox/scripts/netbox_ipam_scanner.py
+```
+### 3.2 Schedule it
+1. Schedule it via cron, for example:
+	- create /etc/cron.d/netbox-scripts
+```
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=""
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name  command to be executed
+*/15 * * * * root /opt/netbox/venv/bin/python3.12 /opt/netbox/scripts/netbox_ipam_scanner.py >> /var/log/netbox/netbox_ipam_scanner.cron.log 2>&1
+```
+-	this will make it run every 15 minutes (adapt to your needs)
+
+### 3.3 The OUI database.
+You can download the required database for free. In the directory where you want to store the db:
+wget -v -d https://maclookup.app/downloads/json-database/get-db -O mac_oui_db.json
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU1NzA3NTY4LDEyODg1NjQ0NjksNTkxOT
-U4ODA3LC03Mjk0MjE0MDldfQ==
+eyJoaXN0b3J5IjpbLTE4MjU0MTMwOTAsOTU1NzA3NTY4LDEyOD
+g1NjQ0NjksNTkxOTU4ODA3LC03Mjk0MjE0MDldfQ==
 -->
