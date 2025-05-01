@@ -150,7 +150,7 @@ You need to prepare a few things in NetBox, before the script can run: you will 
 ```
 ### 3.3 Schedule it
 1. Schedule it via cron, for example:
-	- create /etc/cron.d/netbox-scripts
+	- create /etc/cron.d/netbox-scripts (the example below will make the script run every 15 minutes
 ```
 SHELL=/bin/bash
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
@@ -165,11 +165,10 @@ MAILTO=""
 # *  *  *  *  * user-name  command to be executed
 */15 * * * * root /opt/netbox/venv/bin/python3.12 /opt/netbox/scripts/netbox_ipam_scanner.py >> /var/log/netbox/netbox_ipam_scanner.cron.log 2>&1
 ```
--	this will make it run every 15 minutes (adapt to your needs)
 
 ### 3.4 The OUI database.
 You can download the required database for free. In the directory where you want to store the db:
-wget -v -d https://maclookup.app/downloads/json-database/get-db -O mac_oui_db.json
+```wget -v -d https://maclookup.app/downloads/json-database/get-db -O mac_oui_db.json```
 
 
 ## Disclaimer
@@ -181,7 +180,7 @@ If you run into an issue, report them them in "Issues" and we'll try to resolve 
 If you want to suggest bug-fixes, please do, it will make the scripts better.
 Feel free to suggest improvements, if they are viable, we can work together to add them.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NjQ1MjM1OSwzNDMwODc0NzAsLTE4Mj
-U0MTMwOTAsOTU1NzA3NTY4LDEyODg1NjQ0NjksNTkxOTU4ODA3
-LC03Mjk0MjE0MDldfQ==
+eyJoaXN0b3J5IjpbMTcxNDI2ODQ3MSwxMjY2NDUyMzU5LDM0Mz
+A4NzQ3MCwtMTgyNTQxMzA5MCw5NTU3MDc1NjgsMTI4ODU2NDQ2
+OSw1OTE5NTg4MDcsLTcyOTQyMTQwOV19
 -->
