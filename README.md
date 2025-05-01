@@ -178,10 +178,10 @@ ALWAYS take a backup before trying community contributions
 
 I'm not a Python developer, so the scripts may not be flawless. 
 If you run into an issue, report them them in "Issues" and we'll try to resolve it 
-If you want to suggest bugfixes, please do, it will make the scripts better.
-Feel free to suggest improvements, we'll 
+If you want to suggest bug-fixes, please do, it will make the scripts better.
+Feel free to suggest improvements, if they are viable, we can work together to add them.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDAzMDMxNzAsMzQzMDg3NDcwLC0xOD
-I1NDEzMDkwLDk1NTcwNzU2OCwxMjg4NTY0NDY5LDU5MTk1ODgw
-NywtNzI5NDIxNDA5XX0=
+eyJoaXN0b3J5IjpbMTI2NjQ1MjM1OSwzNDMwODc0NzAsLTE4Mj
+U0MTMwOTAsOTU1NzA3NTY4LDEyODg1NjQ0NjksNTkxOTU4ODA3
+LC03Mjk0MjE0MDldfQ==
 -->
