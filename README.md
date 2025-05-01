@@ -79,6 +79,12 @@ Config file to set various options/variables to match you environment:
 [LOGGING]:
 - directory location of the logs
 - name of the log file
+- log level (DEBUG, INFO or ERROR)
+
+[netbox]:
+- your NetBox URL
+- your NetBox token
+- verify ssl = set to false if you are working with self signed certs
 - 
 
 ## netbox_ipam_scanner_init.py
@@ -92,5 +98,5 @@ This script will
 
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3MTE2OTM3MSwtNzI5NDIxNDA5XX0=
+eyJoaXN0b3J5IjpbMTg2NDYzOTcyOCwtNzI5NDIxNDA5XX0=
 -->
