@@ -39,7 +39,7 @@ There are 3 files:
  - **netbox_ipam_scanner_init.py** : script doing all needed initialization (it is called from the main scanner script)
  - **netbox_ipam_scanner.py** : main scanner script
 
-### Custom fields
+### 2.1 Custom fields
 
 The script needs a number of custom fields (CF) defined. To make it easy, these CF are checked and ***automatically created*** if missing by **netbox_ipam_scanner_init.py** on its first run, or when CF are accidentally renamed or removed. Check these CF before running the scripts, the make sure you don't have any conflicts.
 They may not all be useful for everyone, but they are to me in my specific use case.
@@ -78,11 +78,11 @@ group_name = to organize the CF visibly in the NetBox UI
 - cf_dcim_mac_online = Was this MAC active/online during the last (most recent) scan
 - cf_dcim_mac_scanner_info = Used to store other info from the scanner
 
-### netbox_ipam_scanner.toml
+### 2.2 netbox_ipam_scanner.toml
 Config file to set various options/variables to match you environment. Explanation for each setting is in the file itself.
 
 
-### netbox_ipam_scanner_init.py
+### 2.3 netbox_ipam_scanner_init.py
 Called from the main script, do not run it directly
 This script will
 - Read the netbox_ipam_scanner.toml configuration file 
@@ -110,7 +110,7 @@ This script will
 	- update days offline
 
 ## 3. How to install
-### The basics
+### 3.1 The basics
 1. Copy the 2 script files and the toml file to the main script directory in your NetBox directory
 	 - if you installed netbox in /opt/netbox, copy the files to /opt/netbox/scripts
 2. Copy or download the mac_oui_db.json 
@@ -122,7 +122,7 @@ This script will
 ```
 /opt/netbox/venv/bin/python3.12 /opt/netbox/scripts/netbox_ipam_scanner.py
 ```
-### Schedule it
+### 3.2 Schedule it
 1. Schedule it via cron, for example:
 	- create /etc/cron.d/netbox-scripts
 ```
@@ -141,11 +141,11 @@ MAILTO=""
 ```
 -	this will make it run every 15 minutes (adapt to your needs)
 
-### The OUI database.
+### 3.3 The OUI database.
 You can download the required database for free. In the directory where you want to store the db:
 wget -v -d https://maclookup.app/downloads/json-database/get-db -O mac_oui_db.json
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTc0Nzc2NSw5NTU3MDc1NjgsMTI4OD
-U2NDQ2OSw1OTE5NTg4MDcsLTcyOTQyMTQwOV19
+eyJoaXN0b3J5IjpbLTE4MjU0MTMwOTAsOTU1NzA3NTY4LDEyOD
+g1NjQ0NjksNTkxOTU4ODA3LC03Mjk0MjE0MDldfQ==
 -->
