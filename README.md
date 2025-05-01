@@ -69,14 +69,20 @@ group_name = to organize the CF visibly in the NetBox UI
 - cf_dcim_mac_online = Was this MAC active/online during the last (most recent) scan
 - cf_dcim_mac_scanner_info = Used to store other info from the scanner
 
+## netbox_ipam_scanner.toml
+Config file to set various options/variables to match you environment:
+- NMAP: 
+
 ## netbox_ipam_scanner_init.py
 This script is called from the main script.
 
 This script will
-- Check and create the cust
+- Read the toml configuration file 
+- Check and create the custom fields
+- 
  
 
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzA5MzYxNDgsLTcyOTQyMTQwOV19
+eyJoaXN0b3J5IjpbMTc5NzQwMTE5OCwtNzI5NDIxNDA5XX0=
 -->
