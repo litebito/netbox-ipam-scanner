@@ -109,7 +109,10 @@ This script will
 - Process offline MAC's
 	- update days offline
 
+# How to install
+Copy the 2 script files and the toml file to your NetBox directory, e.g.
+/opt/netbox/scripts
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU1NzA3NTY4LDEyODg1NjQ0NjksNTkxOT
-U4ODA3LC03Mjk0MjE0MDldfQ==
+eyJoaXN0b3J5IjpbLTEwNzIxODAwOTgsOTU1NzA3NTY4LDEyOD
+g1NjQ0NjksNTkxOTU4ODA3LC03Mjk0MjE0MDldfQ==
 -->
