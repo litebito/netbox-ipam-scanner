@@ -4,7 +4,12 @@ The **NetBox IPAM Scanner** is a NetBox / Python script which uses NMAP to scan 
 
 I initially wanted to create a plugin for this, but as I'm not a seasoned Python dev, and to optimize the time I could spend on it, I decided to stick with a script. Also, because most activity would happen in the background anyway, I didn't see the big advantage of creating a plugin for it (except maybe for creating the necessary custom fields automatically)
 
+I also know that this script is a little bit against NetBox's core philosophy (NetBox being a SSOT).
+
+
 I decided to use NMAP as the main scan tool, as it offers most flexibility now and future use.
+
+
 
 I made this script for my use case, but decided to share it, in case it is useful for others.
 
@@ -184,7 +189,7 @@ Feel free to suggest improvements, if they are viable, we can work together to a
 ### A little bit of background
 In the past I used phpIPAM and I wrote a similar script for phpIPAM. But I moved to NetBox for a few reasons (more features, much better API). In phpIPAM, I didn't use any of its features which were not available in NetBox), so for me the move was easy and fast.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzAyNzU1ODAyLC03NjQ2NzY1MDQsMTI2Nj
-Q1MjM1OSwzNDMwODc0NzAsLTE4MjU0MTMwOTAsOTU1NzA3NTY4
-LDEyODg1NjQ0NjksNTkxOTU4ODA3LC03Mjk0MjE0MDldfQ==
+eyJoaXN0b3J5IjpbMTIxMTIwODE1NiwtNzY0Njc2NTA0LDEyNj
+Y0NTIzNTksMzQzMDg3NDcwLC0xODI1NDEzMDkwLDk1NTcwNzU2
+OCwxMjg4NTY0NDY5LDU5MTk1ODgwNywtNzI5NDIxNDA5XX0=
 -->
