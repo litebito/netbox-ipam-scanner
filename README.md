@@ -90,8 +90,8 @@ This script will
  
  ## netbox_ipam_scanner.py
  This script will:
- -
+ - Fetch
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MTExMjI1Myw1OTE5NTg4MDcsLTcyOT
-QyMTQwOV19
+eyJoaXN0b3J5IjpbLTE4ODEwMDU3NTcsNTkxOTU4ODA3LC03Mj
+k0MjE0MDldfQ==
 -->
