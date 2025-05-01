@@ -10,8 +10,9 @@ I made this script for my use case, but decided to share it, in case it is usefu
 
 ## Prerequisites
 - NetBox 4.2.5+ (script developed and tested from 4.2.5 and later) on a linux server
+- Python 3.12+ (
 - nmap installed
-- th
+- the OUI database in JSON format from https://maclookup.app
 
 # What does the NetBox IPAM scanner do
 
@@ -91,6 +92,6 @@ This script will
 
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwNTIxMTAxMiw1OTE5NTg4MDcsLTcyOT
+eyJoaXN0b3J5IjpbMTUwMDQ1ODM4Niw1OTE5NTg4MDcsLTcyOT
 QyMTQwOV19
 -->
