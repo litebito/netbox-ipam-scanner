@@ -116,7 +116,7 @@ You will need to create (in this order) a permissions set, a user_id, an API tok
 1. Logon in NetBox as an admin
 2. go to Authentication > Permissions, create a permission set, for example ***perm_api_ipam_scanner*** and configure this as follows:
 	-	Enabled: True
-	-	Actions : Enable Can View, Can Add, Can Change, Can Delete
+	-	Actions : Enable "Can View", "Can Add", "Can Change", "Can Delete"
 	-	Select the following object types:
 				-   DCIM | interface
 				-   DCIM | device
@@ -128,7 +128,8 @@ You will need to create (in this order) a permissions set, a user_id, an API tok
 				-   Extras | custom field
 				-   Extras | custom field choice set
 3. go to Authentication > Users, create a user, for example ***autom_ipam_scanner*** and configure the user as follows:
--	
+	-	Set status to "Active" and "Staff Active"
+	-	In thee drop down "Permissions" select the permission set you just created (from the example: 
 ### 3.2 The basics
 1. Copy the 2 script files and the toml file to the main script directory in your NetBox directory
 	 - if you installed netbox in /opt/netbox, copy the files to /opt/netbox/scripts
@@ -165,7 +166,7 @@ You can download the required database for free. In the directory where you want
 wget -v -d https://maclookup.app/downloads/json-database/get-db -O mac_oui_db.json
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3NTIxMjg2LC0xODI1NDEzMDkwLDk1NT
-cwNzU2OCwxMjg4NTY0NDY5LDU5MTk1ODgwNywtNzI5NDIxNDA5
-XX0=
+eyJoaXN0b3J5IjpbLTEyODI4NDc1NTcsLTE4MjU0MTMwOTAsOT
+U1NzA3NTY4LDEyODg1NjQ0NjksNTkxOTU4ODA3LC03Mjk0MjE0
+MDldfQ==
 -->
