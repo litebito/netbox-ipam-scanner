@@ -173,10 +173,13 @@ wget -v -d https://maclookup.app/downloads/json-database/get-db -O mac_oui_db.js
 
 
 ## Disclaimer
-Use at your own risk, I'm not responsible for 
+Use at your own risk, I'm not responsible for how the script reacts with or impacts your environment.
+ALWAYS take a backup before trying community contributions
+
 I'm not a Python developer, so the scripts may not be flawless. 
+If you run into an issue, report them thr
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTUwODQ5ODA2LDM0MzA4NzQ3MCwtMTgyNT
-QxMzA5MCw5NTU3MDc1NjgsMTI4ODU2NDQ2OSw1OTE5NTg4MDcs
-LTcyOTQyMTQwOV19
+eyJoaXN0b3J5IjpbLTEwNjE1ODY1NDgsMzQzMDg3NDcwLC0xOD
+I1NDEzMDkwLDk1NTcwNzU2OCwxMjg4NTY0NDY5LDU5MTk1ODgw
+NywtNzI5NDIxNDA5XX0=
 -->
