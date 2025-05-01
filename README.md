@@ -113,9 +113,13 @@ This script will
 1. Copy the 2 script files and the toml file to the main script directory in your NetBox directory
 	 - if you installed netbox in /opt/netbox, copy the files to /opt/netbox/scripts
 2. Copy or download the mac_oui_db.json 
+	-	the easiest is to put the file in the same directory as the scripts
+	-	if you put it somewhere else, don't forget to update the path in the config file
+3. Rename netbox_ipam_scanner_conf_DIST.toml to netbox_ipam_scanner_conf.toml
+	- Update 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODEyMjQ0MzQsOTU1NzA3NTY4LDEyOD
-g1NjQ0NjksNTkxOTU4ODA3LC03Mjk0MjE0MDldfQ==
+eyJoaXN0b3J5IjpbMjAwODIxNDE1MCw5NTU3MDc1NjgsMTI4OD
+U2NDQ2OSw1OTE5NTg4MDcsLTcyOTQyMTQwOV19
 -->
