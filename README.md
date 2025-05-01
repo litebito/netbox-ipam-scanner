@@ -16,6 +16,7 @@ I made this script for my use case, but decided to share it, in case it is usefu
 - Python 3.12+ (script developed and tested with Python 3.12, it may need some adaptation for 3.10 and 3.11)
 - nmap installed
 - the OUI database in JSON format from https://maclookup.app
+- a NetBox API token with the correct permissions
 
 ## 1. What does the NetBox IPAM scanner do
 
@@ -110,7 +111,9 @@ This script will
 	- update days offline
 
 ## 3. How to install
-### 3.1 The basics
+### 3.1 Create the NetBox API token and permissions
+
+### 3.2 The basics
 1. Copy the 2 script files and the toml file to the main script directory in your NetBox directory
 	 - if you installed netbox in /opt/netbox, copy the files to /opt/netbox/scripts
 2. Copy or download the mac_oui_db.json 
@@ -122,7 +125,7 @@ This script will
 ```
 /opt/netbox/venv/bin/python3.12 /opt/netbox/scripts/netbox_ipam_scanner.py
 ```
-### 3.2 Schedule it
+### 3.3 Schedule it
 1. Schedule it via cron, for example:
 	- create /etc/cron.d/netbox-scripts
 ```
@@ -141,11 +144,12 @@ MAILTO=""
 ```
 -	this will make it run every 15 minutes (adapt to your needs)
 
-### 3.3 The OUI database.
+### 3.4 The OUI database.
 You can download the required database for free. In the directory where you want to store the db:
 wget -v -d https://maclookup.app/downloads/json-database/get-db -O mac_oui_db.json
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjU0MTMwOTAsOTU1NzA3NTY4LDEyOD
-g1NjQ0NjksNTkxOTU4ODA3LC03Mjk0MjE0MDldfQ==
+eyJoaXN0b3J5IjpbLTEzNzI4MjQ5NzksLTE4MjU0MTMwOTAsOT
+U1NzA3NTY4LDEyODg1NjQ0NjksNTkxOTU4ODA3LC03Mjk0MjE0
+MDldfQ==
 -->
