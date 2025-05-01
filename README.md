@@ -27,6 +27,7 @@ This is not the end or final script, I've some ideas I want to add in the near f
 - The OUI database in JSON format from https://maclookup.app
 - A NetBox API token with the correct permissions
 - The script requires that online/active hosts are pingable (I'll try to add other scan options later)
+- The script needs to run as root (for Nmap to work correctly)
 
 ## 1. What does the NetBox IPAM scanner do
 
@@ -156,7 +157,7 @@ You need to prepare a few things in NetBox, before the script can run: you will 
 	- Update the netbox_ipam_scanner_conf file with your settings/options
 4. Run the script manually the first time (check for errors):
 ```
-/opt/netbox/venv/bin/python3.12 /opt/netbox/scripts/netbox_ipam_scanner.py
+sudo /opt/netbox/venv/bin/python3.12 /opt/netbox/scripts/netbox_ipam_scanner.py
 ```
 ### 3.3 Schedule it
 1. Schedule it via cron, for example:
@@ -194,8 +195,8 @@ Feel free to suggest improvements, if they are viable, we can work together to a
 ### A little bit of background
 In the past I used phpIPAM and I wrote a similar script for phpIPAM. But I moved to NetBox for a few reasons (more features, much better API). In phpIPAM, I didn't use any of its features which were not available in NetBox), so for me the move was easy and fast.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0MTQ0NDc0MiwyNzIwOTIxOTIsMTgzMT
-QwNzcwOSwxNTE1Njg2NTg0LC03NjQ2NzY1MDQsMTI2NjQ1MjM1
-OSwzNDMwODc0NzAsLTE4MjU0MTMwOTAsOTU1NzA3NTY4LDEyOD
-g1NjQ0NjksNTkxOTU4ODA3LC03Mjk0MjE0MDldfQ==
+eyJoaXN0b3J5IjpbNTcwNDAyMDI4LDI3MjA5MjE5MiwxODMxND
+A3NzA5LDE1MTU2ODY1ODQsLTc2NDY3NjUwNCwxMjY2NDUyMzU5
+LDM0MzA4NzQ3MCwtMTgyNTQxMzA5MCw5NTU3MDc1NjgsMTI4OD
+U2NDQ2OSw1OTE5NTg4MDcsLTcyOTQyMTQwOV19
 -->
