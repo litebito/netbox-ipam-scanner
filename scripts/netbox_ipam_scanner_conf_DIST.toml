@@ -51,7 +51,7 @@ enable_scan_arp = false
 
 
 [mac_oui]
-# Path and filename to the local MAC–to–vendor JSON database (relative to script)
+# Path and filename to the local MAC–to–vendor JSON database
 # If oui_db_path is not set, the script will look for the the local OUI db file in the same directory as the script.
 # If oui_db_path is set, the script will look for the OUI db file in the specified directory.
 oui_db_path = ""
