@@ -4,8 +4,8 @@
 netbox_ipam_scanner_init.py — bootstraps NetBox IPAM scanner
 
 Author:     LiteBitIO
-Version:    1.7.0
-Date:       2025-04-25
+Version:    1.7.1
+Date:       2025-06-25
 License:    GNU GPLv3
 
 Description:
@@ -16,7 +16,7 @@ Description:
 """
 
 __author__ = "LiteBitIO"
-__version__ = "1.7.0"
+__version__ = "1.7.1"
 __license__ = "GNU GPLv3"
 __status__ = "Production"
 
@@ -59,6 +59,7 @@ class Config:
 
 
 conf_path = Path(__file__).parent / "netbox_ipam_scanner_conf.toml"
+
 conf = tomllib.loads(conf_path.read_text(encoding="utf-8"))
 
 config = Config(
@@ -75,7 +76,15 @@ config = Config(
     nmap_dir=Path(conf["nmap"]["output_dir"]),
     ext_mac_lookup=conf["options"].get("ext_mac_lookup", False),
     oui_db_file=Path(conf["mac_oui"]["oui_db_file"]),
-    oui_db_path=Path(conf["mac_oui"]["oui_db_path"]),
+    # If the TOML value is a non‐empty string, use it; otherwise use script dir
+    oui_db_path=(
+        Path(conf["mac_oui"]["oui_db_path"])
+        if conf["mac_oui"]["oui_db_path"]
+        else Path(__file__).parent
+    ),
+
+
+
 )
 
 url_params = {"limit": config.page_size}
@@ -159,8 +168,10 @@ def paged_get(
 
 if config.ext_mac_lookup:
     # Determine where the OUI DB lives:
+    logger.debug(f"Test {config.oui_db_path} for OUI DB {config.oui_db_file}")
     if config.oui_db_path and config.oui_db_path.exists():
         db_path = config.oui_db_path / config.oui_db_file
+
     else:
         # fall back to script directory
         db_path = Path(__file__).parent / config.oui_db_file
