@@ -4,7 +4,7 @@
 netbox_ipam_scanner.py — IPAM scanning for NetBox
 
 Author:     LiteBitIO
-Version:    1.7.1
+Version:    1.7.2
 Date:       2025-04-25
 License:    GNU GPLv3
 Copyright:  (c) 2025 LiteBitIO
@@ -81,7 +81,7 @@ Planned:
 """
 
 __author__ = "LiteBitIO"
-__version__ = "1.7.0"
+__version__ = "1.7.2"
 __license__ = "GNU GPLv3"
 __status__ = "Production"
 
@@ -151,7 +151,7 @@ def exec_nmap_scan(subnet: str, output_file: str) -> bool:
         True if the scan completed successfully; otherwise, False.
     """
     cmd = [
-        "nmap", "-sn", "-PR", "-PE", "-R", "-oX", output_file
+        "nmap", "-sn", "-PR", "-PE", "-PM", "-PP", "-PO", "-PY", "-PU", "-R", "-oX", output_file
     ] + config.nmap_dns.split() + [subnet]
     logging.info(f"Running nmap scan: {' '.join(cmd)}")
     try:
